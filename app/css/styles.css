@@ -1,0 +1,28 @@
+#topper {
+  text-align: center;
+  align-items: center;
+  justify-content: center;
+}
+.results {
+  display: block;
+  align-items: center;
+  justify-content: center;
+  max-width: 660px;
+  margin: auto;
+}
+.well{
+  min-width: 300px;
+  float: left;
+  margin: 15px;
+}
+#show {
+  width: 100%
+}
+#artwork {
+  width: 30%;
+  float: left;
+}
+#details {
+  width: 60%;
+  float: left;
+}
