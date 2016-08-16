@@ -11,7 +11,7 @@ app.controller("TopController", function($scope, $route, $http, $window){
       // $scope.view.zenData = data;
       // console.log(data.data.Search); // the array of results
       movies.list = data.data.Search;
-      console.log(movies.list);
+      // console.log(movies.list);
       $route.reload()
       $window.location.href = '/#/results'
   });
@@ -24,7 +24,7 @@ app.config(function($routeProvider) {
         templateUrl: 'partials/results.html',
         controller: 'ResController'
       })
-      .when('/movie', {
+      .when('/movie/:id', {
         templateUrl: 'partials/show.html',
         controller: 'ShowController'
       })
@@ -37,12 +37,17 @@ app.config(function($routeProvider) {
 app.controller('ResController', function($scope){
   $scope.results = {};
   $scope.results.list = movies.list
-  console.log($scope.results.list);
+  // console.log($scope.results.list);
 });
 
-app.controller('ShowController', function($scope){
-  $scope.view = {};
-  $scope.view.message = "projects!"
+app.controller('ShowController', function($scope, $http, $routeParams){
+  var movieID = $routeParams.id;
+  $scope.movieInfo = {};
+  $http.get('http://www.omdbapi.com/?i=' + movieID + '&plot=short&r=json').then(function(data){
+    console.log(data.data); // the array of results
+    $scope.movieInfo.info = data.data
+
+});
 });
 //
 // app.controller('ResController', function($scope){
@@ -51,3 +56,6 @@ app.controller('ShowController', function($scope){
 // });
 
 // http://www.omdbapi.com/?s=ricky
+
+// http://www.omdbapi.com/?i=tt0371746&plot=short&r=json
+// longer request

@@ -1,11 +1,15 @@
 <div ng-repeat="movie in results.list" class="results">
   <div class="well">
+    <a href="/#/movie/{{movie.imdbID}}">
     <p>
       <strong>{{movie.Title}}</strong>
     </p>
     <p>
       Year: {{movie.Year}}
     </p>
+    </a>
   </div>
 
 </div>
+
+<!-- need to add link to show route with id paramaters to pass -->

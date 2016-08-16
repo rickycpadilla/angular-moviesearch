@@ -19,10 +19,11 @@
   width: 100%
 }
 #artwork {
-  width: 30%;
+  /*width: 20%;*/
   float: left;
 }
 #details {
-  width: 60%;
+  width: 65%;
   float: left;
+  margin-left: 15px
 }

@@ -1,9 +1,37 @@
-<div class="results">
+<div ng-repeat="info in movieInfo" class="results">
   <div class="well well-lg" id="show">
-    <h2>Movie Title</h2>
+    <h2>{{info.Title}}</h2>
     <div class="info">
-      <div id="artwork">art</div>
-      <div id="details">stuff</div>
+      <img style="width: 30%; float: left" src="{{info.Poster}}" alt="" />
+      <div id="details">
+        <p>
+          Starring: {{info.Actors}}
+        </p>
+        <p>
+          {{info.Plot}}
+        </p>
+        <h4>Additional Details</h4>
+        <h5>Awards</h5>
+          {{info.Awards}}
+        <h5>Country</h5>
+          {{info.Country}}
+        <h5>Director</h5>
+          {{info.Director}}
+        <h5>Genre</h5>
+          {{info.Genre}}
+        <h5>Language</h5>
+          {{info.Language}}
+        <h5>Metascore</h5>
+          {{info.Metascore}}
+        <h5>Rated</h5>
+          {{info.Rated}}
+        <h5>Released</h5>
+          {{info.Released}}
+        <h5>Runtime</h5>
+          {{info.Runtime}}
+        <h5>Writer</h5>
+          {{info.Writer}}
+      </div>
 
     </div>
   </div>
