@@ -1,43 +1,11 @@
-<div class="results">
-<div class="well">
-  <p>
-    <strong>Title: Movie</strong>
-  </p>
-  <p>
-    Year: 2016
-  </p>
-</div>
-<div class="well">
-  <p>
-    <strong>Title: Movie</strong>
-  </p>
-  <p>
-    Year: 2016
-  </p>
-</div>
-<div class="well">
-  <p>
-    <strong>Title: Movie</strong>
-  </p>
-  <p>
-    Year: 2016
-  </p>
-</div>
-<div class="well">
-  <p>
-    <strong>Title: Movie</strong>
-  </p>
-  <p>
-    Year: 2016
-  </p>
-</div>
-<div class="well">
-  <p>
-    <strong>Title: Movie</strong>
-  </p>
-  <p>
-    Year: 2016
-  </p>
-</div>
+<div ng-repeat="movie in results.list" class="results">
+  <div class="well">
+    <p>
+      <strong>{{movie.Title}}</strong>
+    </p>
+    <p>
+      Year: {{movie.Year}}
+    </p>
+  </div>
 
 </div>
