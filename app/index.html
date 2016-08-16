@@ -7,18 +7,25 @@
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
   </head>
   <body>
-    <div id="topper">
+    <div ng-controller="TopController" id="topper">
       <h2 style="margin-top: 100px">Angular OMDb API Search</h2>
       <br>
       <h4>Enter a movie by title</h4>
-        <input type="text" name="name" placeholder="Movie Title">
+      <form ng-submit="submitMov()">
+        <input ng-model="Form.movie" type="text" name="movie" placeholder="Movie Title">
         <br>
         <br>
         <button type="submit" class="btn btn-info" name="button">Search! <span class="glyphicon glyphicon-arrow-right" aria-hidden="true"></span></button>
+      </form>
       <hr>
     </div>
     <!-- VIEWS -->
     <div ng-view></div>
+    <!-- never put content in ng-view -->
+
+    <!-- NOTES FROM CLASS -->
+
+
 
     <!-- SHOW -->
 
