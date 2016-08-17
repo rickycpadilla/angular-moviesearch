@@ -6,8 +6,8 @@ app.controller("TopController", function($scope, $route, $http, $window){
     var movie = $scope.Form.movie;
     $http.get('http://www.omdbapi.com/?s=' + movie).then(function(data){
       movies.list = data.data.Search;
-      $route.reload()
       $window.location.href = '/#/results'
+      $route.reload()
     });
   };
 })
